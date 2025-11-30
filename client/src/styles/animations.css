@@ -1,0 +1,287 @@
+/* ========== MODERN ANIMATIONS ========== */
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in from right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale up */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.6s ease-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.shimmer {
+    background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 20%, #f0f0f0 40%, #f0f0f0 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Stagger delays */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+/* ========== MODERN CARD EFFECTS ========== */
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    }
+
+/* Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.glass-card-dark {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ========== GRADIENT BACKGROUNDS ========== */
+
+.gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+.gradient-success {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+.gradient-info {
+    background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+.gradient-warning {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* ========== BUTTON ANIMATIONS ========== */
+
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+    .btn-animated::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .btn-animated:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn-animated:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+/* ========== MODERN INPUTS ========== */
+
+.modern-input {
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+    .modern-input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        transform: translateY(-2px);
+    }
+
+/* ========== PAGE TRANSITIONS ========== */
+
+.page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Dashboard page animation */
+.dashboard-page {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ========== RESPONSIVE ANIMATIONS ========== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

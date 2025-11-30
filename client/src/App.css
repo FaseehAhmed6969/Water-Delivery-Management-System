@@ -1,0 +1,1199 @@
+﻿/* ============================================
+   AQUAFLOW - PREMIUM WATER DELIVERY SYSTEM
+   Ultra Modern Design with Advanced Effects
+============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ============================================
+   ADVANCED ANIMATIONS
+============================================ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* ============================================
+   GLASSMORPHISM EFFECTS
+============================================ */
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR - PREMIUM STYLE
+============================================ */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+
+/* ============================================
+   CARD STYLES - ULTRA PREMIUM
+============================================ */
+
+.card {
+    border: none !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative;
+}
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+    }
+
+    .card:hover::before {
+        left: 100%;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02) !important;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.25) !important;
+    }
+
+.card-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   BUTTON STYLES - NEXT LEVEL
+============================================ */
+
+.btn {
+    border-radius: 12px !important;
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem !important;
+}
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .btn:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px) scale(1.05) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+
+    .btn:active {
+        transform: translateY(-1px) scale(0.98) !important;
+    }
+
+.btn-primary {
+    background: var(--primary-gradient) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+    background: var(--success-gradient) !important;
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+}
+
+.btn-warning {
+    background: var(--warning-gradient) !important;
+    box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+    color: white !important;
+}
+
+.btn-danger {
+    background: var(--danger-gradient) !important;
+    box-shadow: 0 5px 15px rgba(250, 112, 154, 0.4);
+}
+
+.btn-info {
+    background: var(--info-gradient) !important;
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+/* ============================================
+   BADGE STYLES - BEAUTIFUL
+============================================ */
+
+.badge {
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease !important;
+}
+
+    .badge:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+/* ============================================
+   TABLE STYLES - MODERN & CLEAN
+============================================ */
+
+.table {
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+    .table thead {
+        background: var(--primary-gradient);
+        color: white !important;
+    }
+
+        .table thead th {
+            border: none !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 18px 15px !important;
+        }
+
+    .table tbody tr {
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+        .table tbody tr:hover {
+            background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+            transform: scale(1.01);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+    .table tbody td {
+        padding: 15px !important;
+        vertical-align: middle;
+    }
+
+/* ============================================
+   MODAL STYLES - STUNNING
+============================================ */
+
+.modal-content {
+    border-radius: 25px !important;
+    border: none !important;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.4) !important;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 25px 25px 0 0 !important;
+    border: none !important;
+    padding: 25px 30px !important;
+}
+
+.modal-title {
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+    .modal-header .btn-close:hover {
+        transform: rotate(90deg) scale(1.2);
+    }
+
+.modal-body {
+    padding: 30px !important;
+}
+
+/* ============================================
+   FORM STYLES - PREMIUM
+============================================ */
+
+.form-control, .form-select {
+    border-radius: 12px !important;
+    border: 2px solid #e0e0e0 !important;
+    padding: 14px 18px !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s ease !important;
+    background: white;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.15) !important;
+        transform: translateY(-2px);
+    }
+
+.form-label {
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+    font-size: 0.95rem !important;
+}
+
+/* ============================================
+   ALERT STYLES - BEAUTIFUL
+============================================ */
+
+.alert {
+    border-radius: 15px !important;
+    border: none !important;
+    padding: 18px 25px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    animation: fadeInDown 0.5s ease;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%) !important;
+    color: #155724 !important;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%) !important;
+    color: #721c24 !important;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%) !important;
+    color: #856404 !important;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%) !important;
+    color: #0c5460 !important;
+}
+
+/* ============================================
+   TAB STYLES - MODERN
+============================================ */
+
+.nav-tabs {
+    border: none !important;
+    gap: 10px;
+}
+
+    .nav-tabs .nav-link {
+        border: none !important;
+        border-radius: 12px 12px 0 0 !important;
+        padding: 15px 30px !important;
+        font-weight: 600 !important;
+        color: #666 !important;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+    }
+
+        .nav-tabs .nav-link:hover {
+            background: #e9ecef;
+            color: #667eea !important;
+            transform: translateY(-3px);
+        }
+
+        .nav-tabs .nav-link.active {
+            background: var(--primary-gradient) !important;
+            color: white !important;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+/* ============================================
+   STATS CARD - ULTRA PREMIUM
+============================================ */
+
+.stats-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+    .stats-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary-gradient);
+    }
+
+    .stats-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        background: var(--primary-gradient);
+        opacity: 0.1;
+        border-radius: 0 0 0 100%;
+    }
+
+    .stats-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .stats-card h3 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stats-card p {
+        color: #666;
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+/* ============================================
+   ICON BOX - BEAUTIFUL
+============================================ */
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+    .icon-box:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+/* ============================================
+   LOADING SPINNER - CUSTOM
+============================================ */
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.35em;
+    animation: rotate 1s linear infinite;
+}
+
+/* ============================================
+   LIST GROUP - MODERN
+============================================ */
+
+.list-group-item {
+    border-radius: 12px !important;
+    border: none !important;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    padding: 18px 20px !important;
+}
+
+    .list-group-item:hover {
+        background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+        transform: translateX(10px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+/* ============================================
+   PROGRESS BAR - ANIMATED
+============================================ */
+
+.progress {
+    height: 12px !important;
+    border-radius: 10px !important;
+    background-color: #f0f0f0 !important;
+    overflow: visible !important;
+}
+
+.progress-bar {
+    background: var(--primary-gradient) !important;
+    border-radius: 10px !important;
+    position: relative;
+    animation: shimmer 2s infinite;
+    background-size: 200% 100%;
+}
+
+/* ============================================
+   NOTIFICATION DOT - ANIMATED
+============================================ */
+
+.notification-dot {
+    width: 12px;
+    height: 12px;
+    background: #fa709a;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+/* ============================================
+   FLOATING ACTION BUTTON
+============================================ */
+
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+    .fab:hover {
+        transform: scale(1.15) rotate(90deg);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.7);
+    }
+
+/* ============================================
+   TOOLTIP STYLES
+============================================ */
+
+.tooltip-inner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+}
+
+/* ============================================
+   GRADIENT TEXT
+============================================ */
+
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* ============================================
+   BACKGROUND PATTERNS
+============================================ */
+
+.pattern-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.pattern-grid {
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* ============================================
+   EMPTY STATE
+============================================ */
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-state-icon {
+    font-size: 6rem;
+    opacity: 0.2;
+    margin-bottom: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   SHIMMER EFFECT
+============================================ */
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+@media (max-width: 768px) {
+    .stats-card h3 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 20px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .fab {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+
+    .modal-body {
+        padding: 20px !important;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Future Enhancement)
+============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles here if needed */
+}
+
+/* ============================================
+   PRINT STYLES
+============================================ */
+
+@media print {
+    .btn, .fab, .nav-tabs {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   DARK MODE STYLES - IMPROVED
+   ============================================ */
+
+/* ============================================
+   DARK MODE STYLES - FIXED FOR DASHBOARDS
+   ============================================ */
+
+/* DON'T change body background globally */
+body.dark-mode {
+    color: #e4e4e7 !important;
+}
+
+    /* ✅ Dashboard pages - FULL PAGE DARK */
+    body.dark-mode .dashboard-page {
+        background-color: #0a0a0a !important;
+        min-height: 100vh;
+    }
+
+/* ✅ Landing Page Dark Mode - Only center content, NOT whole page */
+.dark-mode .stats-container {
+    background-color: rgba(26, 26, 46, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(45, 45, 68, 0.5) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .portal-card {
+    background-color: rgba(26, 26, 46, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(45, 45, 68, 0.5) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .feature-card,
+.dark-mode .step-card {
+    background-color: rgba(26, 26, 46, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(45, 45, 68, 0.5) !important;
+    color: #e4e4e7 !important;
+}
+
+/* ✅ Login/Register Pages Dark Mode - Only card, NOT background */
+.dark-mode .auth-card {
+    background-color: rgba(26, 26, 46, 0.98) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(45, 45, 68, 0.6) !important;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+    .dark-mode .auth-card:hover {
+        box-shadow: 0 16px 64px rgba(0, 0, 0, 0.8) !important;
+        transform: translateY(-5px);
+    }
+
+.dark-mode .auth-header {
+    background: rgba(22, 33, 62, 0.8) !important;
+    color: #e4e4e7 !important;
+}
+
+/* Rest of your existing dark mode styles... */
+/* (Keep all the card, modal, table, form styles exactly as they were) */
+/* ============================================
+   DASHBOARD FULL PAGE DARK MODE
+   ============================================ */
+
+/* When dark mode is on AND we're on a dashboard page */
+body.dark-mode .dashboard-page {
+    background-color: #0a0a0a !important;
+}
+
+/* Make sure Container takes full height and dark background */
+.dark-mode .dashboard-page .container-fluid {
+    background-color: #0a0a0a !important;
+    min-height: 100vh !important;
+}
+
+
+/* Cards for dashboards */
+.dark-mode .card {
+    background-color: #1a1a2e !important;
+    color: #e4e4e7 !important;
+    border-color: #2d2d44 !important;
+}
+
+.dark-mode .card-header {
+    background-color: #16213e !important;
+    color: #e4e4e7 !important;
+    border-bottom-color: #2d2d44 !important;
+}
+
+.dark-mode .card-body {
+    background-color: #1a1a2e !important;
+}
+
+/* Keep stat cards colorful */
+.dark-mode .card.bg-warning,
+.dark-mode .card.bg-primary,
+.dark-mode .card.bg-success,
+.dark-mode .card.bg-danger,
+.dark-mode .card.bg-info {
+    background: inherit !important;
+    color: white !important;
+}
+
+/* Modals */
+.dark-mode .modal-content {
+    background-color: #1a1a2e !important;
+    color: #e4e4e7 !important;
+    border-color: #2d2d44 !important;
+}
+
+.dark-mode .modal-header {
+    background-color: #16213e !important;
+    border-bottom-color: #2d2d44 !important;
+}
+
+.dark-mode .modal-body {
+    background-color: #1a1a2e !important;
+}
+
+.dark-mode .modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Tables */
+.dark-mode .table {
+    color: #e4e4e7 !important;
+    background-color: #1a1a2e !important;
+}
+
+.dark-mode .table-light,
+.dark-mode thead {
+    background-color: #16213e !important;
+    color: #e4e4e7 !important;
+}
+
+.dark-mode .table-hover tbody tr:hover {
+    background-color: #16213e !important;
+}
+
+.dark-mode .table-bordered,
+.dark-mode .table-bordered th,
+.dark-mode .table-bordered td {
+    border-color: #2d2d44 !important;
+}
+
+.dark-mode tbody tr {
+    border-color: #2d2d44 !important;
+}
+
+.dark-mode .table-warning {
+    background-color: #4d3d1a !important;
+}
+
+/* Forms */
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+    background-color: #16213e !important;
+    color: #e4e4e7 !important;
+    border-color: #2d2d44 !important;
+}
+
+    .dark-mode .form-control::placeholder {
+        color: #a1a1aa !important;
+    }
+
+.dark-mode .form-label {
+    color: #e4e4e7 !important;
+}
+
+.dark-mode .form-check-label {
+    color: #e4e4e7 !important;
+}
+
+/* Alerts - keep them visible with color */
+.dark-mode .alert-info {
+    background-color: #1e3a5f !important;
+    color: #e4e4e7 !important;
+    border-color: #2d5a8f !important;
+}
+
+.dark-mode .alert-success {
+    background-color: #1a3d2e !important;
+    color: #e4e4e7 !important;
+    border-color: #2d6d4f !important;
+}
+
+.dark-mode .alert-warning {
+    background-color: #4d3d1a !important;
+    color: #e4e4e7 !important;
+    border-color: #7d6d2d !important;
+}
+
+.dark-mode .alert-danger {
+    background-color: #4d1a1a !important;
+    color: #e4e4e7 !important;
+    border-color: #7d2d2d !important;
+}
+
+/* List Groups */
+.dark-mode .list-group-item {
+    background-color: #1a1a2e !important;
+    color: #e4e4e7 !important;
+    border-color: #2d2d44 !important;
+}
+
+/* Text colors */
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: #e4e4e7 !important;
+}
+
+.dark-mode .text-muted {
+    color: #a1a1aa !important;
+}
+
+.dark-mode .text-primary {
+    color: #60a5fa !important;
+}
+
+.dark-mode p, .dark-mode span, .dark-mode small {
+    color: #e4e4e7 !important;
+}
+
+.dark-mode a {
+    color: #60a5fa !important;
+}
+
+    .dark-mode a:hover {
+        color: #93c5fd !important;
+    }
+
+/* Backgrounds for dashboards only */
+.dark-mode .bg-white {
+    background-color: #1a1a2e !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #16213e !important;
+}
+
+/* Badges - keep them colorful */
+.dark-mode .badge {
+    color: white !important;
+}
+
+/* Buttons - keep their colors vibrant */
+.dark-mode .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    color: white !important;
+}
+
+    .dark-mode .btn-primary:hover {
+        background: linear-gradient(135deg, #7c8ff5 0%, #8a5ab8 100%) !important;
+    }
+
+.dark-mode .btn-success {
+    background: #10b981 !important;
+    border: none !important;
+    color: white !important;
+}
+
+    .dark-mode .btn-success:hover {
+        background: #059669 !important;
+    }
+
+.dark-mode .btn-warning {
+    background: #f59e0b !important;
+    border: none !important;
+    color: white !important;
+}
+
+    .dark-mode .btn-warning:hover {
+        background: #d97706 !important;
+    }
+
+.dark-mode .btn-danger {
+    background: #ef4444 !important;
+    border: none !important;
+    color: white !important;
+}
+
+    .dark-mode .btn-danger:hover {
+        background: #dc2626 !important;
+    }
+
+.dark-mode .btn-outline-primary,
+.dark-mode .btn-outline-success,
+.dark-mode .btn-outline-warning,
+.dark-mode .btn-outline-danger,
+.dark-mode .btn-outline-info,
+.dark-mode .btn-outline-secondary {
+    background-color: transparent !important;
+    border-width: 2px !important;
+    color: #e4e4e7 !important;
+}
+
+    .dark-mode .btn-outline-primary:hover {
+        background-color: #667eea !important;
+        color: white !important;
+    }
+
+    .dark-mode .btn-outline-danger:hover {
+        background-color: #ef4444 !important;
+        color: white !important;
+    }
+
+/* Tabs */
+.dark-mode .nav-tabs {
+    border-bottom-color: #2d2d44 !important;
+}
+
+    .dark-mode .nav-tabs .nav-link {
+        color: #a1a1aa !important;
+        background-color: #16213e !important;
+        border-color: #2d2d44 !important;
+    }
+
+        .dark-mode .nav-tabs .nav-link.active {
+            color: #e4e4e7 !important;
+            background-color: #1a1a2e !important;
+            border-color: #2d2d44 #2d2d44 #1a1a2e !important;
+        }
+
+        .dark-mode .nav-tabs .nav-link:hover {
+            border-color: #2d2d44 !important;
+            background-color: #1a1a2e !important;
+        }
+
+/* Navbar */
+.dark-mode .navbar {
+    background-color: #16213e !important;
+    border-bottom: 1px solid #2d2d44 !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+    color: #e4e4e7 !important;
+}
+
+    .dark-mode .nav-link:hover {
+        color: #60a5fa !important;
+    }
+
+/* Spinners and Loading */
+.dark-mode .spinner-border {
+    color: #60a5fa !important;
+}
+
+/* Shadows in dark mode */
+.dark-mode .shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.5) !important;
+}
+
+.dark-mode .shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5) !important;
+}
+
+/* Dark Mode Toggle Button - BOTTOM LEFT */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .dark-mode-toggle:hover {
+        transform: scale(1.1) rotate(20deg);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    .dark-mode-toggle:active {
+        transform: scale(0.95);
+    }
+
+body.dark-mode .dark-mode-toggle {
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+}
