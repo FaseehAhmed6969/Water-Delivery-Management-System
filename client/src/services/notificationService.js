@@ -35,7 +35,8 @@ export const playNotificationSound = () => {
 // Check for new notifications
 export const checkNewNotifications = async (lastCheckTime, token) => {
     try {
-        const response = await fetch('http://localhost:5000/api/notifications', {
+        const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+        const response = await fetch(`${API_URL}/notifications`, {
             headers: { 'x-auth-token': token }
         });
         const notifications = await response.json();
