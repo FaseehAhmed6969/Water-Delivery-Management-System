@@ -5,6 +5,12 @@ const dotenv = require('dotenv');
 const http = require('http');
 const socketIo = require('socket.io');
 
+// Root route
+app.get('/', (req, res) => {
+    res.json({ msg: 'Water Delivery API Running - All Features Active! 🚀' });
+});
+
+
 // Load environment variables FIRST
 dotenv.config();
 
@@ -74,3 +80,6 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+// At the very bottom of server.js
+module.exports = app;
